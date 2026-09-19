@@ -39,3 +39,7 @@ def test_db():
         return {
             "error": str(e)
         }
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
